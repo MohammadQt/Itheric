@@ -3,19 +3,19 @@
 	z-index: 2;
 	width: 600px;
 	height: 150px;
-	background-color: #80f;
+	background-color: #eee;
 	border-radius: 10px;
 	display: flex;
 	img {
 		position: absolute;
-		right: 15px;
+		left: 15px;
 		top: -25px;
 		border-radius: 10px;
 	}
 	.player-song {
 		width: 370px;
 		height: 100%;
-		margin-right: 230px;
+		margin-left: 230px;
 		//background-color: red;
 		
 		.title {
@@ -93,14 +93,14 @@ progress[value]::-webkit-progress-value {
 	margin: 0 10px;
 	
 	&:hover {
-		.right, .left {
+		.left, .right {
 			background-color: darken(#eee, 40%);
 		}
 	}
 }
-.right {
+.left {
   height: 100%;
-  float: right;
+  float: left;
   background-color: darken(#eee, 20%);
   width: 36%;
   -webkit-transition: all 0.25s ease;
@@ -119,11 +119,11 @@ progress[value]::-webkit-progress-value {
 .triangle-2 {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: transparent;
   width: 0;
   height: 0;
-  border-left: 16px solid #fff;
+  border-right: 16px solid #fff;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   -webkit-transition: -webkit-transform 0.25s ease;
@@ -131,18 +131,18 @@ progress[value]::-webkit-progress-value {
   transition: transform 0.25s ease;
   transition: transform 0.25s ease, -webkit-transform 0.25s ease;
 }
-.left {
+.right {
   height: 100%;
-  float: left;
+  float: right;
   width: 36%;
   background-color: darken(#eee, 20%);
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.paused .right {
+.paused .left {
   width: 50%;
 }
-.paused .left {
+.paused .right {
   width: 50%;
 }
 .paused .triangle-1 {
