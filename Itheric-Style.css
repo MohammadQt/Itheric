@@ -1,0 +1,286 @@
+/* Modal Newsletter */
+#signup form,#search form {margin:0;}
+.modalfly{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 200ms ease-in;pointer-events:none}
+.modalfly:target{opacity:1;pointer-events:auto}
+.modalfly &gt; div{width:100%;max-width:500px;position:relative;margin:10% auto;background:#fff;min-height:140px;overflow:hidden;border-radius:5px;transform:scale(0.8);transition:transform .6s cubic-bezier(.175,.885,.32,1.275),opacity .3s,visibility .3s}
+.modalfly:target &gt; div{transform:scale(1.0);}
+h2.signup{background:#00aa9f;border-bottom:1px solid #008d84;font-weight:400;text-align:center;padding:10px;color:#fff;font-size:18px}
+.close{color:#657071;position:absolute;top:1px;left:1px;width:30px;height:30px;line-height:30px;text-align:center;font-size:16px}
+.close:hover{text-decoration:none}
+.close:hover{color:#333}
+.newsletter-ithreic{background:#fff;margin:0;padding:20px}
+.newsletter-ithreic h3{color:#657071;font-size:20px;font-weight:400;text-align:center;margin:0 0 15px 0}
+.newsletter-ithreic p{font-size:14px;color:#555;line-height:20px;margin:0}
+.newsletter-ithreic .newsletter-input-sm{border:1px solid rgba(0,0,0,0.14);padding:5px 10px;width:70%;float:right;height:44px;color:#555}
+.newsletter-ithreic .newsletter-ithreic-bot{padding:20px;height:80px;position:relative}
+.newsletter-ithreic .newsletter-button{background:#6a5acd;color:#fff;float:left;height:44px;display:inline-block;font-size:13px;padding:5px 20px;position:relative;text-align:center;border:0;border-radius:3px;cursor:pointer;font-weight:600;transition:all .6s;}
+.newsletter-ithreic .newsletter-button:hover{background:#333;color:#fff;}
+.FollowByEmail .follow-by-email-inner .follow-by-email-address{height:40px!important;border:none;padding:5px;width:96%;margin-bottom:5px;background:#EAE9E9;font-family:&#39;Cairo&#39;,Cairo}
+.FollowByEmail .follow-by-email-inner .follow-by-email-submit{height:40px!important;width:100%;margin-right:0;background:#6a5acd;font-size:16px;font-weight:600;text-transform:uppercase;border-radius:0;font-family:&#39;Cairo&#39;,Cairo}
+
+
+/* CSS Prism Syntax Highlighter */
+pre {
+    display: block;
+    padding: 10px 10px 10px 10px;
+    margin: .5em 0;
+    white-space: pre;
+    word-wrap: break-word;
+    overflow: auto;
+    background-color: #222;
+    position: relative;
+    max-height: 900px;
+    text-align: left;
+	overflow: auto;
+	border-radius: 3px;
+}
+
+pre::before {
+    
+    display: none;
+
+	
+}
+
+pre::after {
+    content: &#39;دبل كليك لتحديد الكل&#39;;&#39;;
+    padding: 2px 10px;
+	 padding: 2px 4px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    background: #6a5acd;
+    top: 10px;
+    color: #fff;
+    line-height: 20px;
+    transition: all 0.5s cubic-bezier(0.47, 0, 0.75, 0.72);
+    font-family: Cairo;
+	border-radius: 3px;
+    font-size: 12px;
+}
+
+pre:hover::after {
+    opacity:0;
+    top: 10%;
+    visibility: visible;
+}
+
+code {
+    font-family: Consolas,Monaco,&#39;
+    Andale Mono&#39;,&#39;Courier New&#39;,Courier,Monospace;
+    color: #88a9ad;
+    background-color: transparent;
+    padding: 1px 2px;
+    font-size: 12px;
+}
+
+pre code {
+    display: block;
+    background: none;
+    border: none;
+    color: #e9e9e9;
+    direction: ltr;
+    text-align: left;
+    word-spacing: normal;
+    padding: 0 0;
+	overflow: auto;
+}
+
+code .token.punctuation {
+    color: #ccc;
+}
+
+pre code .token.punctuation {
+    color: #fafafa;
+}
+
+code .token.comment,code .token.prolog,code .token.doctype,code .token.cdata {
+    color: #777;
+}
+
+code .namespace {
+    opacity: .8;
+}
+
+code .token.property,code .token.tag,code .token.boolean,code .token.number {
+    color: #e5dc56;
+}
+
+code .token.selector,code .token.attr-name,code .token.string {
+    color: #88a9ad;
+}
+
+pre code .token.selector,pre code .token.attr-name {
+    color: #fafafa;
+}
+
+pre code .token.string {
+    color: #40ee46;
+}
+
+code .token.entity,code .token.url,pre .language-css .token.string,pre .style .token.string {
+    color: #ccc;
+}
+
+code .token.operator {
+    color: #1887dd;
+}
+
+code .token.atrule,code .token.attr-value {
+    color: #009999;
+}
+
+pre code .token.atrule,pre code .token.attr-value {
+    color: #1baeb0;
+}
+
+code .token.keyword {
+    color: #e13200;
+    font-style: italic;
+}
+
+code .token.comment {
+    font-style: italic;
+}
+
+code .token.regex {
+    color: #ccc;
+}
+
+code .token.important {
+    font-weight: bold;
+}
+
+code .token.entity {
+    cursor: help;
+}
+
+pre mark {
+    background-color: #ea4f4e!important;
+    color: #fff!important;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+code mark {
+    background-color: #ea4f4e!important;
+    color: #fff!important;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+pre code mark {
+    background-color: #ea4f4e!important;
+    color: #fff!important;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.comments pre {
+    padding: 10px 10px 15px 10px;
+    background: #2c323c;
+}
+
+.comments pre::before {
+    content: &#39;Code&#39;;
+    font-size: 13px;
+    position: relative;
+    top: 0;
+    background-color: #f56954;
+    padding: 3px 10px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+.comments pre::after {
+    font-size: 11px;
+}
+
+.comments pre code {
+    color: #eee;
+}
+
+.comments pre.line-numbers {
+    padding-left: 10px;
+}
+
+
+
+
+
+
+pre[data-codetype=&#39;CSSku&#39;]:before {
+    background-color: #6a5acd;
+	font-family: Cairo;
+}
+
+pre[data-codetype=&#39;HTMLku&#39;]:before {
+font-family: Cairo;
+    background-color: #6a5acd;
+}
+
+pre[data-codetype=&#39;JavaScriptku&#39;]:before {
+font-family: Cairo;
+    background-color: #6a5acd;
+}
+
+pre[data-codetype=&#39;JQueryku&#39;]:before {
+    background-color: #6a5acd;
+	font-family: Cairo;
+}
+
+kbd,codsm{
+color:#6a5acd;
+}
+
+kbd,codsm:hover{color:#6a5acd;}
+
+
+ ::-webkit-scrollbar {
+height:10px;
+width: 10px;
+background: #fff;
+}
+::-webkit-scrollbar-thumb {
+background-color: #6a5acd;
+-moz-border-radius: 0px;
+border-radius: 0px;
+
+}
+
+/* Color Box */
+.colorbox{overflow:hidden;position:relative;margin:.5rem 1.5rem 1rem;box-shadow .25s;border-radius:6px;color:#fff;box-shadow:0 2px 1px 0 rgba(0,0,0,0.16),0 2px 4px 0 rgba(0,0,0,0.3);padding:20px}.colorbox.blue{background:#3f51b5}.colorbox.green{background:#4CAF50}.colorbox.red{background:#F44336}.colorbox.orange{background:#ff9800} 
+</style>
+
+ <style>
+
+st_gdpr_iframe{display:none;}
+.st_gdpr_iframe{display:none;}
+#st_gdpr_iframe{display:none;}
+
+/* Modal Search */
+#search-bar{display:block;position:relative;width:100%}
+input#sq{background:#fff;color:#777;font:400 14px/12px &#39;Cairo&#39;,Cairo;margin:0;padding:11px 20px;width:100%;height:44px;outline:0;border:1px solid rgba(0,0,0,0.14);line-height:normal;transition:all .1s}
+input#sq:focus{color:#333;border-radius:4px}
+#searchfo{position:relative;margin:auto;text-align:center}
+#searchsubmit{background-color:#6a5acd;border:0;color:#fff;display:inline-block;position:absolute;left:0;top:0;padding:15px 30px;transition:all .2s}
+#searchsubmit:hover,#searchsubmit:focus,#searchsubmit:active{background-color:#f6806e;color:#fff;cursor:pointer;outline:0}
+.search-form-icon{color:rgba(255,255,255,1);top:10px;left:22px;position:absolute}
+input#sq::-webkit-input-placeholder,input#sq:-ms-input-placeholder{color:#777}
+input#sq::-moz-placeholder,input#sq:-moz-placeholder{color:#777;opacity:1}
+[type=&quot;search&quot;]{-moz-appearance:textfield;-webkit-appearance:textfield;appearance:textfield}
+
+contms,.contms,#contms{
+background-color: #6a5acd;
+left:50%;
+color:#fff;
+padding:11px 20px;
+}
