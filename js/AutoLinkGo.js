@@ -1,3 +1,4 @@
+
 /*
 CryptoJS v3.1.2
 code.google.com/p/crypto-js
@@ -43,14 +44,17 @@ d[k>>>24]^e[n>>>16&255]^j[g>>>8&255]^l[h&255]^c[p++],n=d[n>>>24]^e[g>>>16&255]^j
 * License    : Free&Primum
 *
 */
-var nihlinkgenerate = function(arr, config){
+var litelinkkgenerate = function(arr, config){
     Array.prototype.forEach.call(document.querySelectorAll('a'),function(a){
         if(a.hostname.length && arr.indexOf(a.hostname.toLowerCase()) === -1){
             var data= {};
             data.url = a.href;
             data.countdown = config.countdown;
-            a.href = config.url + '/' + config.page + '?u=' + encodeURIComponent(CryptoJS.AES.encrypt(JSON.stringify(data), keyit));
+            a.href = config.url + '/' + config.page + '?u=' + encodeURIComponent(CryptoJS.AES.encrypt(JSON.stringify(data), config.keyit));
         }
     });
-    console.log('LiteLink Auto Generate');
+    console.log('NihLink Auto Generate');
 }
+// Example
+// litelinkkgenerate(['blog.itheric.com', 'itheric.com'], {url: 'https://nihlink.blogspot.com', page: 'p/go.html', keyit: 'itheric', countdown: true})
+// ([blacklist domain in array], {config json})
