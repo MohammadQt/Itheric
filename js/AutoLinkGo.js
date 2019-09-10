@@ -49,7 +49,7 @@ var nihlinkgenerate = function(arr, config){
             var data= {};
             data.url = a.href;
             data.countdown = config.countdown;
-            a.href = config.url + '/' + config.page + '?u=' + encodeURIComponent(CryptoJS.AES.encrypt(JSON.stringify(data)));
+            a.href = config.url + '/' + config.page + '?u=' + encodeURIComponent(CryptoJS.AES.encrypt(JSON.stringify(data), keyit));
         }
     });
     console.log('LiteLink Auto Generate');
